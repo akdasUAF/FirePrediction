@@ -1,4 +1,4 @@
-# Weather–Wildfire Model: Dataset Preparation
+# 0. Weather–Wildfire Model: Dataset Preparation
 
 This notebook (`WeatherWildfireModel_PrepareDataSet.ipynb`) builds the training dataset for a wildfire risk model focused on Alaska. It joins historical wildfire records with nearby weather station observations, engineers pre-fire weather features, and computes a composite weather-driven fire risk score for each fire.
 
@@ -85,7 +85,7 @@ For each fire, features are computed only from weather data strictly **before** 
 
 ---
 
-# Weather Wildfire Model: Build ML Models (Random Forest / XGBoost / SVM)
+# 1. Weather Wildfire Model: Build ML Models (Random Forest / XGBoost / SVM)
 
 This notebook (`1_WeatherWildfireModel_BuildMLModels.ipynb`) trains and compares three classical machine-learning models — Random Forest, XGBoost, and SVM — on the same wildfire risk classification and regression tasks used in the DNN and TabFM notebooks. Unlike those, it is fully self-contained: it defines its own `create_map()` helper rather than depending on another notebook's kernel state.
 
@@ -173,7 +173,7 @@ pip install pandas numpy scikit-learn folium ipython xgboost
 
 ---
 
-# Weather Wildfire Model: Build DNN Models
+# 2. Weather Wildfire Model: Build DNN Models
 
 This notebook (`WeatherWildfireModel_BuildDNNModels.ipynb`) trains deep-learning models — a PyTorch feedforward network (DNN) and TabNet — to predict wildfire risk from the engineered weather/fire feature set, for both a classification task (risk category) and a regression task (risk score).
 
@@ -265,7 +265,7 @@ Both `torch` and `pytorch-tabnet` are optional at import time — if either is m
 
 ---
 
-# Weather Wildfire Model: Build Zero-Shot Model (TabFM)
+# 3. Weather Wildfire Model: Build Zero-Shot Model (TabFM)
 
 This notebook (`WeatherWildfireModel_BuildZeroShotModel.ipynb`) evaluates **TabFM**, a zero-shot tabular foundation model from Google Research, on the same wildfire risk classification and regression tasks as the DNN notebook — but without any gradient-based training on this dataset.
 
@@ -350,7 +350,7 @@ If `tabfm` isn't importable, `train_tabfm()` prints an install note and returns 
 
 ---
 
-# Weather Model: Build ML Models
+# 5. Weather Model: Build ML Models
 
 This notebook (`WeatherModel_BuildMLModels.ipynb`) trains and compares two multivariate time-series forecasting models — VARMAX ("ARIMA") and per-variable SARIMAX ("SARIMA") — to predict daily weather parameters at a given location, then uses the fitted models to forecast weather for a new date and coordinate.
 
