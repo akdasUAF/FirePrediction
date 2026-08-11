@@ -1,3 +1,7 @@
+# Data Exploration Research
+
+There is a good bit of data exploration research involved before we started coding utilizing Landsat satellite data using Arcgis. The report can be found in this repository as GSOC_FINAL_SUBMISSION.pdf
+
 # 0. Weather–Wildfire Model: Dataset Preparation
 
 This notebook (`WeatherWildfireModel_PrepareDataSet.ipynb`) builds the training dataset for a wildfire risk model focused on Alaska. It joins historical wildfire records with nearby weather station observations, engineers pre-fire weather features, and computes a composite weather-driven fire risk score for each fire.
